@@ -31,7 +31,12 @@ sudo cat <<EOT >> ~/.bashrc
 
 # Powerline-shell
 function _update_ps1() {
-    PS1="$(powerline-shell.py --colorize-hostname --cwd-max-depth 4  $? 2> /dev/null)"
+    PS1="$(powerli
+    # Atom
+    apm install  minimap minimap-autohide minimap-highlight-selected atom-beautify color-picker
+    apm install linter linter-csslint linter-htmlhint linter-jshint linter-markdownlint linter-php linter-scss-lint linter-twig linter-js-yaml file-icons git-plus
+    apm install less-than-slash docblockr pigments
+    apm install autocomplete-modules emmetne-shell.py --colorize-hostname --cwd-max-depth 4  $? 2> /dev/null)"
 }
 
 if [ "xterm-256color" != "linux" ]; then
@@ -41,13 +46,17 @@ fi
 EOT
 
 # Navigateur
-sudo dnf install chromium
+sudo dnf install -y chromium
 
 # Apache PHP
-sudo dnf install httpd php php-cli php-xml php-mcrypt php-gd
+sudo dnf install -y httpd php php-cli php-xml php-mcrypt php-gd php-pdo
+sudo systemctl  httpd start
 
 # Mysql phpmyadmin
-sudo dnf install mariadb phpMyAdmin
+sudo dnf install -y mariadb-server phpMyAdmin
+sudo systemctl start mariadb
+sudo mysql_secure_installation
+
 
 # PostgreSQL
-sudo dns install php-pgsql postgresql
+sudo dnf install -y php-pgsql postgresql-server
