@@ -27,6 +27,7 @@ fi
 
 # Alias
 alias l='ls -lh'
+alias ll='ls -lah'
 
 EOT
 
@@ -48,6 +49,7 @@ fi
 
 # Alias
 alias l='ls -lh'
+alias ll='ls -lah'
 
 EOT
 
