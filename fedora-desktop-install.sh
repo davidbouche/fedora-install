@@ -25,6 +25,9 @@ if [ "xterm-256color" != "linux" ]; then
     PROMPT_COMMAND="_update_ps1; __vte_prompt_command"
 fi
 
+# Alias
+alias l='ls -lh'
+
 EOT
 
 sudo cat <<EOT >> ~/.bashrc
@@ -42,6 +45,9 @@ function _update_ps1() {
 if [ "xterm-256color" != "linux" ]; then
     PROMPT_COMMAND="_update_ps1; __vte_prompt_command"
 fi
+
+# Alias
+alias l='ls -lh'
 
 EOT
 
