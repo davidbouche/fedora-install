@@ -10,7 +10,7 @@ apm install linter linter-csslint linter-htmlhint linter-jshint linter-markdownl
 apm install git-plus
 
 # Completion
-apm install autocomplete-modules emmet less-than-slash docblockr
+apm install autocomplete-modules emmet less-than-slash docblockr goto-definition
 
 # Esthétique
 apm install file-icons atom-beautify color-picker pigments
