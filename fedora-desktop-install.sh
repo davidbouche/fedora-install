@@ -58,10 +58,12 @@ sudo dnf install -y chromium
 
 # Apache PHP
 sudo dnf install -y httpd php php-cli php-xml php-mcrypt php-gd php-pdo
+sudo systemctl enable httpd
 sudo systemctl  httpd start
 
 # Mysql phpmyadmin
 sudo dnf install -y mariadb-server phpMyAdmin
+sudo systemctl enable mariadb
 sudo systemctl start mariadb
 sudo mysql_secure_installation
 
