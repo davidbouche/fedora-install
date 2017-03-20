@@ -66,7 +66,11 @@ sudo systemctl start mariadb
 sudo mysql_secure_installation
 
 # PostgreSQL
-sudo dnf install -y php-pgsql postgresql-server
+sudo dnf install -y php-pgsql postgresql-server  postgresql-contrib
+sudo systemctl enable postgresql
+sudo systemctl start postgresql
+sudo postgresql-setup --initdb --unit postgresql
+sudo dnf install phpPgAdmin
 
 # Composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
