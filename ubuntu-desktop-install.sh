@@ -2,6 +2,13 @@
 set -e
 ## Installation de mon environnement pour Ubuntu 16.10 Gnome 
 
+sudo apt update -y
+sudo apt dist-upgrade -y
+
+
+# pip pour Powerline-shell
+sudo easy_install pip
+
 # Powerline-shell (a besoin de Python, déjà installé ?)
 sudo git clone https://github.com/powerline/fonts.git /usr/local/share/powerline-fonts
 cd /usr/local/share/powerline-fonts
