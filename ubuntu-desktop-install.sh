@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-## Installation de mon environnement pour Ubuntu 16.10 Gnome 
+## Installation de mon environnement pour Ubuntu 16.10 Gnome
 
 sudo apt update -y
 sudo apt dist-upgrade -y
@@ -40,11 +40,10 @@ EOT
 
 sudo apt-get upgrade -y
 
-# MC
+# Outils
 sudo apt install -y mc
-
-# Navigateur
 sudo apt install -y chromium-browser
+sudo apt install -y filezilla
 
 # Apache PHP
 sudo apt install -y apache2 php php-cli php-xml php-mcrypt php-gd php-pdo php-curl
@@ -79,4 +78,3 @@ php -r "unlink('composer-setup.php');"
 # Configuration Git
 git config --global user.email "david@clicproxy.com"
 git config --global user.name "David BOUCHÉ"
-
