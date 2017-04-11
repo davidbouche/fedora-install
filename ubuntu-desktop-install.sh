@@ -78,3 +78,9 @@ php -r "unlink('composer-setup.php');"
 # Configuration Git
 git config --global user.email "david@clicproxy.com"
 git config --global user.name "David BOUCHÉ"
+
+# Docker
+curl -sSL https://get.docker.com/ | sh
+curl -L https://github.com/docker/compose/releases/download/1.12.0/docker-compose-`uname -s`-`uname -m` > /tmp/docker-compose
+sudo mv /tmp/docker-compose /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
