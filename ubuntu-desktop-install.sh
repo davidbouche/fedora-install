@@ -41,7 +41,7 @@ EOT
 sudo apt-get upgrade -y
 
 # Outils
-sudo apt install -y mc
+sudo apt install -y mc curl pwgen
 sudo apt install -y chromium-browser
 sudo apt install -y filezilla
 
