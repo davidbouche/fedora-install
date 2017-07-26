@@ -7,6 +7,7 @@ sudo apt dist-upgrade -y
 
 
 # pip pour Powerline-shell
+sudo apt-get install -y python-setuptools
 sudo easy_install pip
 
 # Powerline-shell (a besoin de Python, déjà installé ?)
@@ -44,6 +45,16 @@ sudo apt-get upgrade -y
 sudo apt install -y mc curl pwgen
 sudo apt install -y chromium-browser
 sudo apt install -y filezilla
+
+# Chrome
+sudo apt-get install -y libxss1 libappindicator1 libindicator7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
+sudo apt-get install -f
+
+# Gnome
+sudo apt install -y gnome-shell
+sudo apt install -y gnome-tweak-tool
 
 # Apache PHP
 sudo apt install -y apache2 php php-cli php-xml php-mcrypt php-gd php-pdo php-curl
