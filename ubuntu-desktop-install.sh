@@ -74,6 +74,10 @@ sudo systemctl enable postgresql
 sudo systemctl start postgresql
 sudo apt install -y phppgadmin
 
+# Ruby environnement (projets Redmine)
+sudo apt install -y ruby
+gem install bundler
+
 # MongoDB
 #sudo apt install -y mongodb-server
 #sudo systemctl enable mongod
