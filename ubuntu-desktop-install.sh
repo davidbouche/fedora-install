@@ -15,22 +15,18 @@ sudo git clone https://github.com/powerline/fonts.git /usr/local/share/powerline
 cd /usr/local/share/powerline-fonts
 sudo ./install.sh
 
-sudo git clone https://github.com/banga/powerline-shell.git /usr/local/share/powerline-shell
-cd /usr/local/share/powerline-shell
-sudo ./install.py
-sudo chmod a+x /usr/local/share/powerline-shell/powerline-shell.py
-sudo ln -s /usr/local/share/powerline-shell/powerline-shell.py /usr/local/bin/powerline-shell.py
+sudo pip install --user powerline-shell
 sudo pip install argparse
 
 cat <<EOT >> ~/.bashrc
 
 # Powerline-shell
 function _update_ps1() {
-    PS1="\$(powerline-shell.py \$? 2> /dev/null)"
+    PS1="$(powerline-shell $?)"
 }
 
-if [ "\$TERM" != "linux" ]; then
-    PROMPT_COMMAND="_update_ps1; \$PROMPT_COMMAND"
+if [ "$TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
 # Alias
