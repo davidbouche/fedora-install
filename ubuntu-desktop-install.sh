@@ -57,7 +57,7 @@ sudo apt install -y gnome-shell
 sudo apt install -y gnome-tweak-tool
 
 # Apache PHP
-sudo apt install -y apache2 php php-cli php-xml php-mcrypt php-gd php-pdo php-curl
+sudo apt install -y apache2 php php-cli php-xml php-mcrypt php-gd php-pdo php-curl php-soap
 sudo systemctl enable apache2
 sudo a2enmod rewrite
 sudo systemctl restart apache2
