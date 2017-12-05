@@ -15,22 +15,18 @@ sudo git clone https://github.com/powerline/fonts.git /usr/local/share/powerline
 cd /usr/local/share/powerline-fonts
 sudo ./install.sh
 
-sudo git clone https://github.com/banga/powerline-shell.git /usr/local/share/powerline-shell
-cd /usr/local/share/powerline-shell
-sudo ./install.py
-sudo chmod a+x /usr/local/share/powerline-shell/powerline-shell.py
-sudo ln -s /usr/local/share/powerline-shell/powerline-shell.py /usr/local/bin/powerline-shell.py
+sudo pip install --user powerline-shell
 sudo pip install argparse
 
 cat <<EOT >> ~/.bashrc
 
 # Powerline-shell
 function _update_ps1() {
-    PS1="\$(powerline-shell.py \$? 2> /dev/null)"
+    PS1="$(powerline-shell $?)"
 }
 
-if [ "\$TERM" != "linux" ]; then
-    PROMPT_COMMAND="_update_ps1; \$PROMPT_COMMAND"
+if [ "$TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
 # Alias
@@ -86,8 +82,8 @@ gem install bundler
 # Composer
 cd /tmp
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-sudo php composer-setup.php --install-dir=/usr/local/bin  --filename=composer
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
 php -r "unlink('composer-setup.php');"
 
 # Configuration Git
