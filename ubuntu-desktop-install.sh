@@ -15,7 +15,7 @@ sudo git clone https://github.com/powerline/fonts.git /usr/local/share/powerline
 cd /usr/local/share/powerline-fonts
 sudo ./install.sh
 
-sudo pip install --user powerline-shell
+sudo pip install powerline-shell
 sudo pip install argparse
 
 cat <<EOT >> ~/.bashrc
